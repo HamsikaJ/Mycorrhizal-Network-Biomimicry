@@ -6,6 +6,7 @@ This project analyzes how fungal networks change their shape to survive in high-
 ## Repository Structure
 * **data/**: Contains raw topological data (`mycorrhizal_samples.txt`) and processed features (`physical_summary.csv`).
 * **notebooks/**: Contains the main analysis (`01_Biomimetic_Topology_Analysis.ipynb`) and the math script (`calculate_footprint.py`).
+* **docs/**: Contains the chat history with AI (`AI_Assistance_Chat.md`) for transparency and credibility.
 * **requirements.txt**: The list of software dependencies needed to run the analysis.
 
 ## How to Run the Analysis (Universal Setup)
