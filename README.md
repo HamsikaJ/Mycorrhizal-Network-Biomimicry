@@ -40,6 +40,14 @@ To ensure results are identical (Target: **0.80 Recall**) and to bypass common e
 * **Automated Data:** The pipeline is "self-healing." If `physical_summary.csv` is missing, the notebook automatically triggers the `calculate_footprint.py` script to regenerate all geometric features from the raw data.
 * **Fixed Seed:** We use `random_state=42` across all models to ensure consistent, reproducible results across all hardware and platforms.
 
+If the notebook hangs or libraries fail to load, please check the following:
+
+* **Handling Buffer/Execution Hangs:** If cells show a "loading" status for more than **5 minutes** without producing output, the kernel may have encountered a deadlock. **Interrupt and restart the kernel**, then select "Clear All Outputs" before re-running the cells.
+* **Python Version Compatibility:** This project was developed using **Python 3.12/3.14**. Ensure `xgboost` and `scikit-learn` binaries are correctly compiled for your specific environment. If issues persist, a stable version (Python 3.12) is recommended.
+* **Kernel Selection (VS Code):** Ensure the `.venv` created during installation is selected as the active Jupyter kernel. If cells spin indefinitely, use **"Developer: Reload Window"** to refresh the extension host.
+* **Pathing Errors (Windows/PowerShell):** If you encounter `CommandNotFoundException` or Linux-style path errors (e.g., paths starting with `/C:/`), ensure you are running commands from a standard PowerShell terminal rather than a shell with mismatched pathing configurations.
+* **Environment Reset:** If dependencies conflict, delete the `.venv` folder and re-run the `pip install -r requirements.txt` command to ensure a clean state.
+
 ---
 
 ## Scientific Results
